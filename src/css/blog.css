@@ -1,0 +1,153 @@
+.container {
+    margin-top: 98px;
+    width: 800px !important;
+}
+
+/* Form caller */
+.create-caller-div {
+    font-size: 1.25em;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.create-caller {
+    background-color: lightgray;
+    color: gray;
+    font-weight: 300;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* Pop up form */
+.pop-up-form {
+    width: 50vw;
+    height: 60vh;
+    position: fixed;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    top: 20vh;
+    right: 25vw;
+    background-color: white;
+    padding: 15px;
+    font-size: 1.25em;
+    display: none;
+}
+
+.pop-up-form label {
+    display: block;
+}
+
+.pop-up-form .text-input {
+    width: 100%;
+    border-bottom: green 2px solid;
+    margin: 10px 0;
+}
+
+.pop-up-form .text-input:focus {
+    outline: none;
+}
+
+.pop-up-form .add-post-btn,
+.edit-post-btn {
+    background-color: green;
+    color: white;
+    width: 49%;
+    padding: 15px;
+    border-radius: 25px;
+    margin: auto;
+    position: relative;
+    top: 0;
+    display: inline-block;
+}
+
+.pop-up-form .add-post-btn:hover,
+.edit-post-btn:hover {
+    opacity: .7;
+    top: -5px;
+    cursor: pointer;
+}
+
+.pop-up-form .remove-create-form,
+.remove-edit-form {
+    background-color: red;
+    color: white;
+    width: 49%;
+    padding: 15px;
+    border-radius: 25px;
+    margin: auto;
+    position: relative;
+    top: 0;
+    display: inline-block;
+}
+
+.pop-up-form .remove-create-form:hover,
+.remove-edit-form:hover {
+    opacity: .7;
+    top: -5px;
+    cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+    background-color: lightgreen;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+    position: fixed;
+    top: 0;
+}
+
+.dark-overlay {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 98;
+    position: fixed;
+    top: 0;
+    opacity: .5;
+    display: none;
+}
+
+/* Posts decoration */
+
+.post {
+    height: fit-content;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.post .img {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0;
+}
+
+.post h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.post p {
+    font-weight: 400;
+}
+
+.post button {
+    width: 49%;
+    padding: 10px 0;
+    margin: 0 .25%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.post button:hover {
+    opacity: .7;
+    top: -3px;
+}

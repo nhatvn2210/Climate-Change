@@ -1,0 +1,85 @@
+/* Register Form */
+.form {
+    width: 60vw;
+    height: 70vh;
+    margin: 15vh auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    padding: 15px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.contact,
+.message {
+    width: 100%;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+/* Contact */
+.contact h1 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.contact {
+    border-right: 2px green solid;
+}
+
+.location,
+.phone,
+.email {
+    margin: 10px 0;
+}
+
+.contact i,
+.contact p {
+    display: inline-block;
+}
+
+.icon-list {
+    font-size: 1.5em;
+    margin: 10px 20px;
+    justify-content: space-evenly;
+}
+
+/* Message */
+
+.message h1 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.message label {
+    display: block;
+}
+
+.message .text-input {
+    border-bottom: solid green 2px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.message .text-input:focus {
+    outline: none;
+}
+
+.message .submit {
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    width: 50%;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgreen;
+    position: fixed;
+    top: 0;
+    z-index: -99;
+}

@@ -1,0 +1,295 @@
+/* General */
+.title {
+    text-align: center;
+}
+
+.break-div {
+    width: 100%;
+    height: 150px;
+}
+
+.container {
+    width: 1200px !important;
+    margin: 0 auto;
+}
+
+
+/* Animation */
+/* Animation define */
+@keyframes fly-up {
+    from {
+        position: relative;
+        top: 10px;
+        opacity: 0;
+    }
+
+    to {
+        position: relative;
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes float-up {
+    from {
+        position: relative;
+        top: 100px;
+        opacity: 0;
+        z-index: -25;
+    }
+
+    to {
+        position: relative;
+        top: 0;
+        opacity: 1;
+        z-index: -25;
+    }
+}
+
+@keyframes appear-opacity {
+    from {
+        opacity: 0;
+        position: fixed;
+    }
+
+    to {
+        opacity: 1;
+        position: fixed;
+    }
+}
+
+@keyframes split-vertical-out {
+    from {
+        position: relative;
+        right: 100vw;
+        opacity: 0;
+        z-index: -25;
+    }
+
+    to {
+        position: relative;
+        right: 0;
+        opacity: 1;
+        z-index: -25;
+    }
+}
+
+@keyframes exit {
+    from {
+        display: block;
+    }
+
+    to {
+        display: none;
+    }
+}
+
+@keyframes hover-fly {
+    from {
+        cursor: pointer;
+        position: relative;
+        bottom: 0;
+    }
+
+    to {
+        cursor: pointer;
+        position: relative;
+        bottom: 3px;
+    }
+}
+/* Animation class */
+.fly-up {
+    animation-name: fly-up;
+    animation-duration: 2s;
+}
+.split-vertical-out{
+    animation-name: split-vertical-out;
+}
+.float-up{
+    animation-name: float-up;
+}
+.exit{
+    animation-name: exit;
+}
+.appear-opacity{
+    animation-name: appear-opacity;
+}
+.hover-fly:hover{
+    opacity: 0.8;
+    animation-name: hover-fly;
+    animation-duration: 0.5s;
+    position: relative;
+    bottom: 3px;
+}
+.split-vertical-out, .float-up, .exit, .appear-opacity{
+    animation-duration: 3s;
+}
+/* Font Class */
+/* Roboto */
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-lighter-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Animation Class */
+/* Navigation Style */
+nav {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    color: black;
+}
+
+.menu li,
+.acc-option a {
+    padding: 5px;
+    border-radius: 8px;
+    position: relative;
+    transition: bottom .5s color .5s;
+}
+
+.menu li::after,
+.acc-option a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width .5s;
+}
+
+.menu li:hover,
+.acc-option a:hover {
+    bottom: 3px;
+    color: green;
+}
+
+.menu li:hover::after,
+.acc-option a:hover::after {
+    width: 80%;
+}
+
+.sign-out-btn {
+    text-transform: uppercase;
+}
+
+/* General dropdown */
+
+.has-dropdown {
+    position: relative;
+}
+
+.dropdown-container {
+    list-style: none;
+    padding: 0;
+    display: none;
+    width: fit-content;
+}
+
+.dropdown-arrow {
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    transition: rotate .5s;
+    margin-top: 3px;
+}
+
+.has-dropdown:hover .dropdown-arrow {
+    rotate: 90deg;
+}
+
+.has-dropdown .dropdown-container li {
+    transition: background-color .5s, color .5s;
+    padding: 10px;
+}
+
+.has-dropdown:hover .dropdown-container {
+    display: block;
+    position: absolute;
+    top: 28px;
+    width: 55%;
+    background-color: white;
+}
+
+.has-dropdown:hover .dropdown-container li:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+}

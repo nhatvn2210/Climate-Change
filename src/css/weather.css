@@ -1,0 +1,86 @@
+/* Left content */
+/* Search form */
+.search-form {
+  width: 600px;
+  height: 60vh;
+  margin: calc((40vh - 68px) / 2) auto;
+}
+
+.search-form .title {
+  font-size: 2em;
+  text-transform: capitalize;
+  margin-bottom: 25;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.left-content,
+.right-content {
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Left content */
+.left-content {
+  margin-right: 10px;
+}
+
+.left-content label {
+  font-size: 1.25em;
+  text-align: center;
+  display: block;
+}
+
+.left-content input {
+  border-bottom: green 2px solid;
+  width: 100%;
+}
+
+.left-content input:focus {
+  outline: none;
+}
+
+/* Weather content */
+.weather-content {
+  text-align: center;
+}
+
+.weather-content .place {
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.weather-content .description,
+.weather-content .temperature {
+  text-transform: capitalize;
+  font-size: 1.25em;
+}
+
+.weather-content div{
+  margin: 0 auto;
+  width: 100px;
+}
+
+.weather-content .weather-icon {
+  width: 100%;
+}
+
+/* Right content */
+.right-content {
+  margin-left: 10px;
+}
+
+.overlay {
+  background-color: lightgreen;
+  width: 100vw;
+  height: 100vh;
+  z-index: -99;
+  position: fixed;
+  top: 0;
+}

@@ -1,0 +1,76 @@
+/* Register Form */
+.form {
+    width: 60vw;
+    height: 60vh;
+    margin: 20vh auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    padding: 15px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.left-form,
+.right-form {
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.form label {
+    display: block;
+}
+
+.form .flex-container input {
+    border-bottom: solid green 2px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.form .flex-container input:focus {
+    outline: none;
+}
+
+.submit {
+    width: 50%;
+    margin: 10px auto;
+
+}
+
+.form .submit-btn {
+    width: 100%;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.5em;
+    position: relative;
+    top: 0;
+    transition: top .3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    top: -3px;
+}
+
+.register-link {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+.register-link p {
+    display: inline;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgreen;
+    position: fixed;
+    top: 0;
+    z-index: -99;
+}
