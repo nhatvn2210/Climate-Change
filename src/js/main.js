@@ -17,7 +17,7 @@ const renderDisplayName = (name) => {
     accOptionDiv.classList.add("has-dropdown");
 }
 // Main script
-if(!currentUser.displayName){
+if(!currentUser){
     window.location.pathname = "./login.html";
 }
 else{
