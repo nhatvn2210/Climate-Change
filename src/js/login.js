@@ -34,13 +34,6 @@ const handleLogin = (event) => {
         });
 }
 // Main script
-// Kiểm tra trạng thái đăng nhập
-firebase.auth().onAuthStateChanged((user) => {
-    if (!user) {
-        // Người dùng chưa đăng nhập, tiếp tục xử lý đăng nhập
-        form.addEventListener("submit", handleLogin);
-    } else {
-        // Nếu người dùng đã đăng nhập, chuyển hướng đến trang home
-        window.location.replace("./index.html");
-    }
+form.addEventListener("submit", (event) => {
+    handleLogin(event);
 });

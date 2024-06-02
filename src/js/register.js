@@ -32,8 +32,6 @@ const handleSignUp = event => {
         .then((userCredential) => {
             // Signed in 
             let user = userCredential.user;
-            // Alert
-            alert("Bạn đã đăng kí thành công!");
             // Update the user's display name
             user.updateProfile({
                 displayName: fullName,
@@ -46,21 +44,6 @@ const handleSignUp = event => {
                 .catch(error => {
                     console.error("Error updating display name:", error.message);
                 })
-
-            // Add to Firestore
-            db.collection("users")
-                .add({
-                    fullName,
-                    dob,
-                    phoneNumber,
-                    email,
-                    password
-                })
-                // When adding failed, notice the error
-                .catch((error) => {
-                    console.error("Error adding document: ", error);
-                });
-            window.location.pathname = "./login.html";
         })
         .catch((error) => {
             // When sign up failed, alert errors
@@ -68,6 +51,21 @@ const handleSignUp = event => {
             let errorMessage = error.message;
             alert(errorMessage);
         });
+    // Add to Firestore
+    db.collection("users")
+        .add({
+            fullName: fullName,
+            dob: dob,
+            phoneNumber: phoneNumber,
+            email: email,
+            password: password
+        })
+        // When adding failed, notice the error
+        .catch((error) => {
+            console.error("Error adding document: ", error);
+        });
+    alert("Bạn đã đăng kí thành công!");
+    window.location.pathname = "./login.html";
 }
 // Main script
 form.addEventListener("submit", (event) => {
