@@ -5,7 +5,7 @@ console.log(signOutBtn);
 const handleSignOut = () => {
     const text = "Bạn có muốn đăng xuất không?";
     if (confirm(text)) {
-        localStorage.setItem("current_user_data", "");
+        localStorage.setItem("current_user_data", null);
         firebase
             .auth()
             .signOut()

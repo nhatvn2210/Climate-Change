@@ -25,6 +25,7 @@ const handleLogin = (event) => {
             localStorage.setItem('current_user_data', JSON.stringify(userSaveLS))
             alert('Đăng nhập thành công!');
             window.location.pathname = "./index.html";
+
         })
         .catch((error) => {
             let errorCode = error.code;
@@ -33,7 +34,13 @@ const handleLogin = (event) => {
         });
 }
 // Main script
-
-form.addEventListener("submit", (event) => {
-    handleLogin(event);
-})
+// Kiểm tra trạng thái đăng nhập
+firebase.auth().onAuthStateChanged((user) => {
+    if (!user) {
+        // Người dùng chưa đăng nhập, tiếp tục xử lý đăng nhập
+        form.addEventListener("submit", handleLogin);
+    } else {
+        // Nếu người dùng đã đăng nhập, chuyển hướng đến trang home
+        window.location.replace("./index.html");
+    }
+});
