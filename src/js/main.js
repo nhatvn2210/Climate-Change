@@ -1,6 +1,6 @@
 // DOM
 const accOptionDiv = document.querySelector(".acc-option");
-const currentUser = JSON.parse(localStorage.getItem("current_user_data"));
+const currentUser = JSON.parse(localStorage.getItem("current_user_data")) || {};
 // Function
 const renderDisplayName = (name) => {
     let htmls =
@@ -17,6 +17,9 @@ const renderDisplayName = (name) => {
     accOptionDiv.classList.add("has-dropdown");
 }
 // Main script
-if(currentUser.displayName){
+if(!currentUser.displayName){
+    window.location.pathname = "./login.html";
+}
+else{
     renderDisplayName(currentUser.displayName);
 }

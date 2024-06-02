@@ -66,19 +66,31 @@ const fetchPosts = () => {
 
 // Render dữ liệu
 const renderPosts = (posts) => {
-  const html = posts.map( (post) => {
-    return `
-      <div class="post">
-        <h2>Được đăng bởi: ${post.author}</h2>
-        <h1>${post.title}</h2>
-        <p>${post.content}</p>
-        <div class="img" style="background-image: url(${post.imgPath});"></div>
-        <button class="edit-post bg-[orange]" onclick="callEditForm('${post.id}', '${post.title}', '${post.content}', '${post.imgPath}')">Edit</button>
-        <button class="delete-post bg-[red]" onclick="deletePost('${post.id}')">Delete</button>
+  let html = ``;
+  for (let i in posts) {
+    html +=
+      `
+    <div class="post">
+        <h2>Được đăng bởi: ${posts[i].author}</h2>
+        <h1>${posts[i].title}</h2>
+        <p>${posts[i].content}</p>
+        <div class="img" style="background-image: url(${posts[i].imgPath});"></div>
+      `;
+    if(posts[i].author == currentUser.displayName){
+      html += 
+      `
+        <button class="edit-post bg-[orange]" onclick="callEditForm('${posts[i].id}', '${posts[i].title}', '${posts[i].content}', '${posts[i].imgPath}')">Edit</button>
+        <button class="delete-post bg-[red]" onclick="deletePost('${posts[i].id}')">Delete</button>
       </div>
-    `
-  })
-    .join("");
+      `
+    }
+    else{
+      html += 
+      `
+      </div>
+      `
+    }
+  }
   postsContainer.innerHTML = html;
 };
 
